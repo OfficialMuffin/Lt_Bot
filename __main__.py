@@ -20,6 +20,17 @@ async def on_message(message) :
          await client.send_message(message.channel, "Hello There!")
      if message.content.upper() == ("ARE YOU OK?") :
          await client.send_message(message.channel, "Yup, I'm great thanks :)")
+		 
+# Bot Commands
+     if message.content.upper().startswith('!H') :
+          userID = message.author.id
+          await client.send_message(message.channel, "<@%s> Hello There!" % (userID))
+     if message.content.upper().startswith('!S') :
+
+          args = message.content.split(" ")
+          args[1:] = ("Hey There")
+          await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
+
 
 
 # Client Secret API Key

@@ -16,11 +16,11 @@ async def on_ready() :
 # Normal Text Chat
 @client.event
 async def on_message(message) :
-     if message.content.upper() == ("HI" || "HELLO") :
+     if message.content.upper() == ("HI") :
          await client.send_message(message.channel, "Hello There!")
      if message.content.upper() == ("ARE YOU OK?") :
          await client.send_message(message.channel, "Yup, I'm great thanks :)")
 
 
 # Client Secret API Key
-client.run("YOUR KEY HERE")
+client.run("***************************************************")
